@@ -1,23 +1,29 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(LineRenderer))]
+[RequireComponent(typeof(SteamVR_TrackedObject))]
 public class VRController: MonoBehaviour
 {
+    [SerializeField] private GameObject slideScreen;
+
     private LineRenderer lineRenderer;
+    private SteamVR_TrackedObject trackedObject;
+    private Slide slide;
+
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.enabled = false;
+        trackedObject = GetComponent<SteamVR_TrackedObject>();
+        slide = slideScreen.GetComponent<Slide>();
     }
 
     void Update()
     {
-        SteamVR_TrackedObject trackedObject = GetComponent<SteamVR_TrackedObject>();
         var device = SteamVR_Controller.Input((int)trackedObject.index);
-  
+        
+        // トリガーを押している間レーザーを出す
         if (device.GetPress(SteamVR_Controller.ButtonMask.Trigger))
         {
-            Debug.Log("トリガーを深く引いている");
             lineRenderer.enabled = true;
         }
         else
@@ -25,5 +31,10 @@ public class VRController: MonoBehaviour
            lineRenderer.enabled = false;
         }
  
+        // スライドページ送り
+        if(device.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad))
+        {
+            slide.ChangeSlide();
+        }
     }
 }
