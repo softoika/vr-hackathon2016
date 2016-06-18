@@ -1,43 +1,94 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.Events;
 
-public struct PointerEventArgs
-{
-    public uint controllerIndex;
-    public uint flags;
-    public float distance;
-    public Transform target;
-}
-
-public delegate void PointerEventHandler(object sender, PointerEventArgs e);
-
+/*
+ * NOTE: This should be in its own namespace, e.g. Valve.VR.SteamVR.Extras.
+ * Unfortunately, all the SteamVR_*-classes are in the root namespace instead
+ * of Valve.VR.SteamVR, so I'd have to change all of that.
+ * But at least moved PointerEventArgs and PointerEventHandler into 
+ * SteamVR_LaserPointer to prevent naming conflicts ("PointerEventArgs" is
+ * a very generic name which could easily cause naming conflicts!)
+ */
 
 public class SteamVR_LaserPointer : MonoBehaviour
 {
-    public bool active = true;
-    public Color color;
-    public float thickness = 0.002f;
+    public struct PointerEventArgs
+    {
+        public uint controllerIndex;
+        public uint flags;
+        public float distance;
+        public Transform target;
+    }
+
+    public delegate void PointerEventHandler(object sender, PointerEventArgs e);
+
+    [System.Serializable]
+    public class PointerEvent : UnityEvent<PointerEventArgs> { }
+
+    /*
+        * removed active/isActive and using "enabled" instead
+        * the approach active/isActive was only half implemented
+        * and using enabled for this purpose seems more natural
+        */
+    //public bool active = true;
+    //private bool isActive = false;
+    public Color color = new Color(0.0F, 0.8F, 1F); // TODO: Default to color in Steam dashboard
+    public float thickness = 0.0001F;
+    public float thicknessPressed = 0.01F; // added instead of hardcoded *5
     public GameObject holder;
     public GameObject pointer;
-    bool isActive = false;
     public bool addRigidBody = false;
-    public Transform reference;
+    //public Transform reference; // not used => removed
+
+    // this is more efficient but can only be used from code
     public event PointerEventHandler PointerIn;
     public event PointerEventHandler PointerOut;
 
-    Transform previousContact = null;
+    // this adds a little overhead but can be assigned via Unity editor
+    public PointerEvent unityPointerIn = new PointerEvent();
+    public PointerEvent unityPointerOut = new PointerEvent();
 
-	// Use this for initialization
-	void Start ()
+    protected Transform previousContact = null;
+
+    private SteamVR_TrackedController controller; // used in every Update
+
+    // using Awake() instead of Start() because Awake() is called before OnEnable!
+    public void Awake()
     {
-        holder = new GameObject();
-        holder.transform.parent = this.transform;
-        holder.transform.localPosition = Vector3.zero;
+        controller = GetComponent<SteamVR_TrackedController>();
 
-        pointer = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        pointer.transform.parent = holder.transform;
+        // only if it was not set up already (i.e. you could use your own)
+        if (holder == null)
+        {
+            holder = new GameObject("Holder"); // "New Game Object" is not a good name ;-)
+            holder.transform.parent = this.transform;
+            holder.transform.localPosition = Vector3.zero;
+            holder.transform.localRotation = Quaternion.identity; // added
+        }
+        holder.gameObject.SetActive(false); // disable until OnEnable() is called
+
+        // only if it was not set up already (i.e. you could use your own)
+        if (pointer == null)
+        {
+            pointer = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            pointer.name = "Pointer";
+            pointer.transform.parent = holder.transform;
+            pointer.transform.localPosition = new Vector3(0f, 0f, 50f);
+            pointer.transform.localRotation = Quaternion.identity; // added
+
+            /*
+             * This requires that you have the shader Unlit/Color in the build.
+             * To make sure this is the case, follow the instructions in the
+             * manual: http://docs.unity3d.com/ScriptReference/Shader.Find.html
+             */
+            Material newMaterial = new Material(Shader.Find("Unlit/Color"));
+            pointer.GetComponent<MeshRenderer>().material = newMaterial;
+
+        }
+        // this must be done also when you're using your own!
         pointer.transform.localScale = new Vector3(thickness, thickness, 100f);
-        pointer.transform.localPosition = new Vector3(0f, 0f, 50f);
+        pointer.GetComponent<MeshRenderer>().material.SetColor("_Color", color);
+
         BoxCollider collider = pointer.GetComponent<BoxCollider>();
         if (addRigidBody)
         {
@@ -50,89 +101,126 @@ public class SteamVR_LaserPointer : MonoBehaviour
         }
         else
         {
-            if(collider)
+            if (collider)
             {
                 Object.Destroy(collider);
             }
         }
-        Material newMaterial = new Material(Shader.Find("Unlit/Color"));
-        newMaterial.SetColor("_Color", color);
-        pointer.GetComponent<MeshRenderer>().material = newMaterial;
-	}
-
-    public virtual void OnPointerIn(PointerEventArgs e)
-    {
-        if (PointerIn != null)
-            PointerIn(this, e);
     }
 
-    public virtual void OnPointerOut(PointerEventArgs e)
+    // we also need to properly handle the Dashboard
+    public void OnEnable()
     {
-        if (PointerOut != null)
-            PointerOut(this, e);
+        holder.gameObject.SetActive(true);
+        SteamVR_Utils.Event.Listen("input_focus", OnInputFocus);
     }
 
-
-    // Update is called once per frame
-	void Update ()
+    public void OnDisable()
     {
-        if (!isActive)
+        holder.gameObject.SetActive(false);
+        SteamVR_Utils.Event.Remove("input_focus", OnInputFocus);
+    }
+
+    private void OnInputFocus(params object[] args)
+    {
+        bool hasFocus = (bool)args[0];
+        if (hasFocus)
         {
-            isActive = true;
-            this.transform.GetChild(0).gameObject.SetActive(true);
+            holder.gameObject.SetActive(this.enabled);
         }
+        else
+        {
+            holder.gameObject.SetActive(false);
+        }
+    }
+
+    void Update()
+    {
+        // this whole thing fixed FROM HERE -->
+        //if (!isActive && active) {
+        //    isActive = true;
+        //    // GetChild(0) fails when there's other children
+        //    //this.transform.GetChild(0).gameObject.SetActive(true);
+        //    holder.gameObject.SetActive(true);
+        //} else if (isActive && !active) {
+        //    isActive = false;
+        //    holder.gameObject.SetActive(false);
+        //}
+
+        //if (!isActive) {
+        //    return;
+        //}
+        // <-- UNTIL HERE ;-)
 
         float dist = 100f;
 
-        SteamVR_TrackedController controller = GetComponent<SteamVR_TrackedController>();
+        // don't do GetComponent<>() each Update - moved to Start!
+        //SteamVR_TrackedController controller = GetComponent<SteamVR_TrackedController>();
 
         Ray raycast = new Ray(transform.position, transform.forward);
-        RaycastHit hit;
-        bool bHit = Physics.Raycast(raycast, out hit);
+        RaycastHit hitInfo;
+        bool hasTarget = Physics.Raycast(raycast, out hitInfo);
 
-        if(previousContact && previousContact != hit.transform)
+        if (previousContact && previousContact != hitInfo.transform)
         {
-            PointerEventArgs args = new PointerEventArgs();
+            PointerEventArgs argsOut = new PointerEventArgs(); // args => argsOut for consistency
             if (controller != null)
             {
-                args.controllerIndex = controller.controllerIndex;
+                argsOut.controllerIndex = controller.controllerIndex;
             }
-            args.distance = 0f;
-            args.flags = 0;
-            args.target = previousContact;
-            OnPointerOut(args);
+            argsOut.distance = 0f;
+            argsOut.flags = 0;
+            argsOut.target = previousContact;
+            OnPointerOut(argsOut);
             previousContact = null;
         }
-        if(bHit && previousContact != hit.transform)
+
+        if (hasTarget && previousContact != hitInfo.transform)
         {
             PointerEventArgs argsIn = new PointerEventArgs();
             if (controller != null)
             {
                 argsIn.controllerIndex = controller.controllerIndex;
             }
-            argsIn.distance = hit.distance;
+            argsIn.distance = hitInfo.distance;
             argsIn.flags = 0;
-            argsIn.target = hit.transform;
+            argsIn.target = hitInfo.transform;
             OnPointerIn(argsIn);
-            previousContact = hit.transform;
+            previousContact = hitInfo.transform;
         }
-        if(!bHit)
+
+        if (!hasTarget)
         {
             previousContact = null;
         }
-        if (bHit && hit.distance < 100f)
+        else if (hitInfo.distance < 100f)
         {
-            dist = hit.distance;
+            dist = hitInfo.distance;
         }
 
-        if (controller != null && controller.triggerPressed)
-        {
-            pointer.transform.localScale = new Vector3(thickness * 5f, thickness * 5f, dist);
-        }
-        else
-        {
-            pointer.transform.localScale = new Vector3(thickness, thickness, dist);
-        }
-        pointer.transform.localPosition = new Vector3(0f, 0f, dist/2f);
+        pointer.transform.localPosition = new Vector3(0f, 0f, dist / 2f);
+
+        float currentThickness = controller != null && controller.triggerPressed
+            ? thicknessPressed : thickness;
+        pointer.transform.localScale = new Vector3(currentThickness, currentThickness, dist);
     }
+
+    public virtual void OnPointerIn(PointerEventArgs e)
+    {
+        if (PointerIn != null)
+        {
+            PointerIn(this, e);
+        }
+        unityPointerIn.Invoke(e);
+    }
+
+    public virtual void OnPointerOut(PointerEventArgs e)
+    {
+        if (PointerOut != null)
+        {
+            PointerOut(this, e);
+        }
+        unityPointerOut.Invoke(e);
+    }
+
 }
