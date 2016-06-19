@@ -20,23 +20,40 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
         public delegate void OnCharacterInstantiated(GameObject character);
 
         public static event OnCharacterInstantiated CharacterInstantiated;
-
+        public GameObject PrezenterPrefab;
+        public GameObject AudiencePrefab;
+        GameObject obj;
         public new void OnJoinedRoom() {
+            //Debug.Log("Instantiating: " + o.name);
+            Vector3 spawnPos = Vector3.zero;
+            if (this.SpawnPosition != null)
+            {
+                spawnPos = this.SpawnPosition.position;
+            }
             if (this.PrefabsToInstantiate != null) {
-                GameObject o = PrefabsToInstantiate[(PhotonNetwork.player.ID - 1) % 4];
-                //Debug.Log("Instantiating: " + o.name);
-                Vector3 spawnPos = Vector3.zero;
-                if (this.SpawnPosition != null) {
-                    spawnPos = this.SpawnPosition.position;
+                // GameObject o = PrefabsToInstantiate[(PhotonNetwork.player.ID - 1) % 4];
+                if (DataManager.instance.prezenter)
+                {
+                    obj = PrezenterPrefab;
+                }else
+                {
+                   obj = AudiencePrefab;
+                    GameObject.DestroyObject(GameObject.Find("Main Camera (head)"));
                 }
+
+               
+               
+                /*
                 Vector3 random = Random.insideUnitSphere;
                 random = this.PositionOffset * random.normalized;
                 spawnPos += random;
                 spawnPos.y = 0;
-                Camera.main.transform.position += spawnPos;
-                o = PhotonNetwork.Instantiate(o.name, spawnPos, Quaternion.identity, 0);
+                */
+              //  Camera.main.transform.position += spawnPos;
+                obj = PhotonNetwork.Instantiate(obj.name, spawnPos, Quaternion.identity, 0);
+                
                 if (CharacterInstantiated != null) {
-                    CharacterInstantiated(o);
+                    CharacterInstantiated(obj);
                 }
             }
         }

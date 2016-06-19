@@ -1,0 +1,730 @@
+fileFormatVersion: 2
+guid: cf0d2af4f95b396448e9f888ada5e04c
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ManB Bip01
+    100004: ManB Bip01 Spine2
+    100006: ManB EYE L
+    100008: ManB EYE R
+    100010: ManB Footsteps
+    100012: ManB Head
+    100014: ManB HeadNub
+    100016: ManB L Calf
+    100018: ManB L Clavicle
+    100020: ManB L Finger0
+    100022: ManB L Finger01
+    100024: ManB L Finger0Nub
+    100026: ManB L Finger1
+    100028: ManB L Finger11
+    100030: ManB L Finger1Nub
+    100032: ManB L Foot
+    100034: ManB L Forearm
+    100036: ManB L Hand
+    100038: ManB L Thigh
+    100040: ManB L Toe0
+    100042: ManB L Toe0Nub
+    100044: ManB L UpperArm
+    100046: ManB Neck
+    100048: ManB Pelvis
+    100050: ManB R Calf
+    100052: ManB R Clavicle
+    100054: ManB R Finger0
+    100056: ManB R Finger01
+    100058: ManB R Finger0Nub
+    100060: ManB R Finger1
+    100062: ManB R Finger11
+    100064: ManB R Finger1Nub
+    100066: ManB R Foot
+    100068: ManB R Forearm
+    100070: ManB R Hand
+    100072: ManB R Thigh
+    100074: ManB R Toe0
+    100076: ManB R Toe0Nub
+    100078: ManB R UpperArm
+    100080: ManB Spine
+    100082: ManB Spine1
+    100084: ManB talk chin
+    100086: ManB talk lower lip01
+    100088: ManB talk lower lip02
+    100090: ManB talk mouth l01
+    100092: ManB talk mouth l02
+    100094: ManB talk mouth r01
+    100096: ManB talk mouth r02
+    100098: ManB talk upper lip01
+    100100: ManB talk upper lip02
+    100102: ManB X_l01
+    100104: ManB X_l02
+    100106: ManB X_r01
+    100108: ManB X_r02
+    100110: ManB Z_l01
+    100112: ManB Z_l02
+    100114: ManB Z_r01
+    100116: ManB Z_r02
+    100118: ManB_MESH
+    400000: //RootNode
+    400002: ManB Bip01
+    400004: ManB Bip01 Spine2
+    400006: ManB EYE L
+    400008: ManB EYE R
+    400010: ManB Footsteps
+    400012: ManB Head
+    400014: ManB HeadNub
+    400016: ManB L Calf
+    400018: ManB L Clavicle
+    400020: ManB L Finger0
+    400022: ManB L Finger01
+    400024: ManB L Finger0Nub
+    400026: ManB L Finger1
+    400028: ManB L Finger11
+    400030: ManB L Finger1Nub
+    400032: ManB L Foot
+    400034: ManB L Forearm
+    400036: ManB L Hand
+    400038: ManB L Thigh
+    400040: ManB L Toe0
+    400042: ManB L Toe0Nub
+    400044: ManB L UpperArm
+    400046: ManB Neck
+    400048: ManB Pelvis
+    400050: ManB R Calf
+    400052: ManB R Clavicle
+    400054: ManB R Finger0
+    400056: ManB R Finger01
+    400058: ManB R Finger0Nub
+    400060: ManB R Finger1
+    400062: ManB R Finger11
+    400064: ManB R Finger1Nub
+    400066: ManB R Foot
+    400068: ManB R Forearm
+    400070: ManB R Hand
+    400072: ManB R Thigh
+    400074: ManB R Toe0
+    400076: ManB R Toe0Nub
+    400078: ManB R UpperArm
+    400080: ManB Spine
+    400082: ManB Spine1
+    400084: ManB talk chin
+    400086: ManB talk lower lip01
+    400088: ManB talk lower lip02
+    400090: ManB talk mouth l01
+    400092: ManB talk mouth l02
+    400094: ManB talk mouth r01
+    400096: ManB talk mouth r02
+    400098: ManB talk upper lip01
+    400100: ManB talk upper lip02
+    400102: ManB X_l01
+    400104: ManB X_l02
+    400106: ManB X_r01
+    400108: ManB X_r02
+    400110: ManB Z_l01
+    400112: ManB Z_l02
+    400114: ManB Z_r01
+    400116: ManB Z_r02
+    400118: ManB_MESH
+    2300000: ManB EYE L
+    2300002: ManB EYE R
+    3300000: ManB EYE L
+    3300002: ManB EYE R
+    4300000: ManB_MESH
+    4300002: ManB EYE L
+    4300004: ManB EYE R
+    9500000: //RootNode
+    13700000: ManB_MESH
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: ManB Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB L Thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB R Thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB L Calf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB R Calf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB L Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB R Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB L Clavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB R Clavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB L UpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB R UpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB L Forearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB R Forearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB L Hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB R Hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB L Toe0
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB R Toe0
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB L Finger0
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB L Finger01
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB L Finger1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB L Finger11
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB R Finger0
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB R Finger01
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB R Finger1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ManB R Finger11
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: ManB(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ManB Bip01
+      position: {x: 1.0278342e-10, y: 0.09512444, z: 0.00092787977}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: ManB Footsteps
+      position: {x: -0, y: 0, z: -0.09516165}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ManB Pelvis
+      position: {x: 0.00064088864, y: -6.696155e-14, z: 0}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+      transformModified: 1
+    - name: ManB Spine
+      position: {x: -0.0028707583, y: -0.000011878223, z: 0.000000003997644}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ManB R Thigh
+      position: {x: 0.0028707506, y: 0.000014197484, z: -0.010478506}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.9999999}
+      transformModified: 1
+    - name: ManB R Calf
+      position: {x: -0.047615435, y: 0, z: -4.768372e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+      transformModified: 1
+    - name: ManB R Foot
+      position: {x: -0.037346415, y: 4.768372e-10, z: -4.768372e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000002, y: 0.99999964, z: 0.9999999}
+      transformModified: 1
+    - name: ManB R Toe0
+      position: {x: -0.010482761, y: 0.013279822, z: -0.0000000014305115}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: ManB R Toe0Nub
+      position: {x: -0.009430391, y: -3.7252905e-12, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ManB Spine1
+      position: {x: -0.014922265, y: -0.000014224947, z: -3.945428e-11}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ManB Bip01 Spine2
+      position: {x: -0.017864365, y: -0.000018198358, z: -5.0474968e-11}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+      transformModified: 1
+    - name: ManB Neck
+      position: {x: -0.022246797, y: -0.004823598, z: -0.0000000028431062}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+      transformModified: 1
+    - name: ManB Head
+      position: {x: -0.0071935123, y: -0.0000000038146974, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+      transformModified: 1
+    - name: ManB EYE L
+      position: {x: -0.010791978, y: 0.007903598, z: 0.0035456237}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.114914, y: 1.114914, z: 1.114913}
+      transformModified: 1
+    - name: ManB EYE R
+      position: {x: -0.010791978, y: 0.007903603, z: -0.0035117187}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.1149137, y: 1.1149136, z: 1.1149129}
+      transformModified: 1
+    - name: ManB HeadNub
+      position: {x: -0.02116591, y: 2.384186e-10, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: ManB talk chin
+      position: {x: -0.0054599, y: 0.0009006539, z: -0.000038121638}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.96593416, y: 0.90930873, z: 0.9365704}
+      transformModified: 1
+    - name: ManB talk lower lip01
+      position: {x: -0.010765717, y: 0.0000001678467, z: 9.1269614e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.7289375, y: 0.67138517, z: 0.9999998}
+      transformModified: 1
+    - name: ManB talk lower lip02
+      position: {x: -0.0042086947, y: -0.0000000038146974, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999997, y: 0.9999999, z: 0.99999976}
+      transformModified: 1
+    - name: ManB talk mouth l01
+      position: {x: -0.00815683, y: 0.004557526, z: 0.00517405}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+      transformModified: 1
+    - name: ManB talk mouth l02
+      position: {x: -0.0064173206, y: 0.000000007629395, z: 0.0000000038146974}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.99999976, z: 0.99999994}
+      transformModified: 1
+    - name: ManB talk mouth r01
+      position: {x: -0.0081568, y: 0.004557546, z: -0.005173133}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1, y: -1.0000001, z: -1.0000001}
+      transformModified: 1
+    - name: ManB talk mouth r02
+      position: {x: -0.006417328, y: 0, z: -0.0000000038146974}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 0.9999998}
+      transformModified: 1
+    - name: ManB talk upper lip01
+      position: {x: -0.005957642, y: 0.010572385, z: 0.00006360841}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.7209614, y: 0.7209615, z: 0.7209613}
+      transformModified: 1
+    - name: ManB talk upper lip02
+      position: {x: -0.0021383362, y: 0.0000000038146974, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.9999998}
+      transformModified: 1
+    - name: ManB X_l01
+      position: {x: -0.011857132, y: 0.001621466, z: 0.0025589338}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.9999996, z: 0.99999976}
+      transformModified: 1
+    - name: ManB X_l02
+      position: {x: -0.0073083346, y: 0.00000001525879, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 0.9999998}
+      transformModified: 1
+    - name: ManB X_r01
+      position: {x: -0.011857132, y: 0.0016214729, z: -0.0031468554}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 0.9999997}
+      transformModified: 1
+    - name: ManB X_r02
+      position: {x: -0.0073083346, y: 0.00000003051758, z: 4.768372e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+      transformModified: 1
+    - name: ManB Z_l01
+      position: {x: -0.010432099, y: 0.0057158046, z: 0.003416609}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.903628, y: 0.99999976, z: 1.0000001}
+      transformModified: 1
+    - name: ManB Z_l02
+      position: {x: -0.0034631921, y: -0.000000045776368, z: -0.000000006198883}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.54914874, y: 1.0014713, z: 0.99999994}
+      transformModified: 1
+    - name: ManB Z_r01
+      position: {x: -0.010433915, y: 0.005715188, z: -0.0033934286}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9036279, y: 0.9999998, z: 0.99999964}
+      transformModified: 1
+    - name: ManB Z_r02
+      position: {x: -0.003463173, y: -0.00000006103516, z: -0.0000000030994416}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.5491156, y: 1.0015383, z: 0.9999999}
+      transformModified: 1
+    - name: ManB R Clavicle
+      position: {x: 0.005849152, y: 0.0010943833, z: -0.0063297385}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: 0.7071068, w: -0.000000030908623}
+      scale: {x: 1, y: 0.99999976, z: 1}
+      transformModified: 1
+    - name: ManB R UpperArm
+      position: {x: -0.0129161235, y: 4.768372e-10, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000004, z: 1}
+      transformModified: 1
+    - name: ManB R Forearm
+      position: {x: -0.02890016, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 0.9999998}
+      transformModified: 1
+    - name: ManB R Hand
+      position: {x: -0.026123429, y: 4.768372e-10, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+      scale: {x: 0.99999964, y: 0.9999997, z: 0.99999976}
+      transformModified: 1
+    - name: ManB R Finger0
+      position: {x: -0.00462891, y: 0.0030119705, z: 0.0036679069}
+      rotation: {x: 0, y: 0.38268346, z: 0, w: 0.9238795}
+      scale: {x: 1.0000004, y: 0.9999999, z: 0.99999994}
+      transformModified: 1
+    - name: ManB R Finger01
+      position: {x: -0.003130539, y: 0, z: 0.000000007629395}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1}
+      transformModified: 1
+    - name: ManB R Finger0Nub
+      position: {x: -0.0029867478, y: 0, z: -0.000000007629395}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1, y: -1, z: -1}
+      transformModified: 1
+    - name: ManB R Finger1
+      position: {x: -0.009709072, y: -0.0012999497, z: 0.00025297262}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000007, y: 1.0000004, z: 1.0000001}
+      transformModified: 1
+    - name: ManB R Finger11
+      position: {x: -0.003830456, y: 0, z: 4.768372e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: ManB R Finger1Nub
+      position: {x: -0.005629452, y: -0.000000007629395, z: -4.768372e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1, y: -0.99999994, z: -1}
+      transformModified: 1
+    - name: ManB L Clavicle
+      position: {x: 0.005849152, y: 0.001094349, z: 0.006329723}
+      rotation: {x: 0.7071068, y: -0.000000030908623, z: -0.7071068, w: 0.000000030908623}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+      transformModified: 1
+    - name: ManB L UpperArm
+      position: {x: -0.012916121, y: -4.768372e-10, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000001}
+      transformModified: 1
+    - name: ManB L Forearm
+      position: {x: -0.028900163, y: 4.768372e-10, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 0.9999998, z: 0.9999997}
+      transformModified: 1
+    - name: ManB L Hand
+      position: {x: -0.026123442, y: -9.536744e-10, z: 0.000000007629395}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: -0.7071068}
+      scale: {x: 1, y: 1.0000004, z: 1.0000005}
+      transformModified: 1
+    - name: ManB L Finger0
+      position: {x: -0.004628918, y: 0.0030119705, z: -0.003667907}
+      rotation: {x: 0, y: 0.3826835, z: 0, w: -0.9238795}
+      scale: {x: 1, y: 0.9999999, z: 0.9999998}
+      transformModified: 1
+    - name: ManB L Finger01
+      position: {x: -0.003130539, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999976, y: 0.99999976, z: 1.0000001}
+      transformModified: 1
+    - name: ManB L Finger0Nub
+      position: {x: -0.0029867555, y: 0.0000000038146974, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ManB L Finger1
+      position: {x: -0.009709069, y: -0.001299942, z: -0.00025297358}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.9999997, z: 0.9999999}
+      transformModified: 1
+    - name: ManB L Finger11
+      position: {x: -0.003830456, y: -0.000000007629395, z: -4.768372e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 0.9999999}
+      transformModified: 1
+    - name: ManB L Finger1Nub
+      position: {x: -0.005629452, y: 0, z: 4.768372e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+      transformModified: 1
+    - name: ManB L Thigh
+      position: {x: 0.0028707506, y: 0.00001413937, z: 0.010478506}
+      rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.9999997}
+      transformModified: 1
+    - name: ManB L Calf
+      position: {x: -0.047615435, y: 9.536744e-10, z: -4.768372e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000001}
+      transformModified: 1
+    - name: ManB L Foot
+      position: {x: -0.03734641, y: -4.768372e-10, z: 4.768372e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+      transformModified: 1
+    - name: ManB L Toe0
+      position: {x: -0.010482761, y: 0.013279823, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
+      scale: {x: 0.99999976, y: 0.99999964, z: 1}
+      transformModified: 1
+    - name: ManB L Toe0Nub
+      position: {x: -0.009430393, y: -3.7252905e-12, z: 9.536744e-10}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: -1.0000001, y: -1, z: -1.0000001}
+      transformModified: 1
+    - name: ManB_MESH
+      position: {x: -0.000004481077, y: 0.1356441, z: -0.00066476944}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1.1465544, y: 1.1465544, z: 1.1465544}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
